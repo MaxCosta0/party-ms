@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -27,10 +28,10 @@ public class Item {
     private String title;
 
     @NotBlank
-    private String attractions;
+    private String attraction;
 
     @NotNull
-    private Date date;
+    private Timestamp date;
 
     @NotBlank
     private String location;
