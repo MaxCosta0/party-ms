@@ -7,8 +7,7 @@ import br.com.maxley.catalogms.repository.ItemRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddItemToCatalog {
-
+public class AddItemToCatalog{
     private final ItemRepository itemRepository;
 
     public AddItemToCatalog(ItemRepository itemRepository) {
@@ -16,7 +15,7 @@ public class AddItemToCatalog {
     }
 
     public ItemCardResponse handle(NewItemRequest newItemRequest) {
-        Item newItem = itemRepository.save(newItemRequest);
+        Item newItem = itemRepository.save(Item.fromNewItemRequest(newItemRequest));
         return ItemCardResponse.fromEntity(newItem);
     }
 }

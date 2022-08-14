@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -14,22 +14,10 @@ import java.util.Date;
 public class NewItemRequest {
     private String title;
     private String attractions;
-    private Date date;
+    private Timestamp date;
     private String location;
     private String genre;
     private String image;
-
     private String description;
 
-    public Item toEntity() {
-        return new Item(
-                this.title,
-                this.attractions,
-                this.date,
-                this.location,
-                this.genre,
-                this.image,
-                this.description
-        );
-    }
 }

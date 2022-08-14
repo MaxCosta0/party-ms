@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class ShowCatalogItems {
     private final ItemRepository itemRepository;
 
-    public ShowCatalogItems(ItemRepository itemRepository, ModelMapper modelMapper) {
+    public ShowCatalogItems(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
     }
 
